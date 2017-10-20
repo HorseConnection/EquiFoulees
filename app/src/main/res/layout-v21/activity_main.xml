@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/bg3"
+    tools:context="com.horse_connection.coaching.equifoulees.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/libFoulees"
+        android:textColor="@color/txt"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/titreC"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/C"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titrePA"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/PA"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/titreC"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titrePB"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/PB"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/titrePA"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titrePC"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/PC"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/titrePB"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titrePD"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/PD"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/titrePC"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clCheval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTitre"
+        tools:ignore="RtlHardcoded">
+
+        <RadioButton
+            android:id="@+id/rbC"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="true"
+            android:onClick="onRBTabFouleesClicked"
+            android:textColor="@color/hd"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/editFC"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/hd"
+            android:textColorLink="@color/hd"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/rbC"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="27dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clPoneyA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/clCheval"
+        app:layout_constraintTop_toBottomOf="@+id/clTitre"
+        tools:layout_editor_absoluteX="75dp">
+
+        <RadioButton
+            android:id="@+id/rbPA"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabFouleesClicked"
+            android:textColor="@color/hd"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/editFPA"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/hd"
+            android:textColorLink="@color/hd"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/rbPA"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="27dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clPoneyB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/clPoneyA"
+        app:layout_constraintTop_toBottomOf="@+id/clTitre"
+        tools:layout_editor_absoluteX="142dp">
+
+        <RadioButton
+            android:id="@+id/rbPB"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabFouleesClicked"
+            android:textColor="@color/hd"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/editFPB"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/hd"
+            android:textColorLink="@color/hd"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/rbPB"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="27dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clPoneyC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/clPoneyB"
+        app:layout_constraintTop_toBottomOf="@+id/clTitre"
+        tools:layout_editor_absoluteX="209dp">
+
+        <RadioButton
+            android:id="@+id/rbPC"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabFouleesClicked"
+            android:textColor="@color/hd"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/editFPC"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/hd"
+            android:textColorLink="@color/hd"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/rbPC"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="27dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clPoneyD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/clPoneyC"
+        app:layout_constraintTop_toBottomOf="@+id/clTitre"
+        tools:layout_editor_absoluteX="276dp">
+
+        <RadioButton
+            android:id="@+id/rbPD"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabFouleesClicked"
+            android:textColor="@color/hd"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/editFPD"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/hd"
+            android:textColorLink="@color/hd"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/rbPD"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor"
+            tools:layout_editor_absoluteX="27dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:text="@string/libProfil"
+        android:textColor="@color/txt"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clCheval" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clObst1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:id="@+id/tvObst1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="@string/libObst1"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbDispoObs11"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hd"
+            android:checked="true"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libObs1"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/tvObst1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbDispoObs12"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libObs2"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/rbDispoObs11"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbDispoObs13"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libObs3"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/rbDispoObs12"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHautObst1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:text="@string/libHObs"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvObst1" />
+
+        <TextView
+            android:id="@+id/tvLargObst1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:gravity="left"
+            android:text="@string/libLObs"
+            android:textColor="@color/hd"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@+id/editHautObst1"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoObs12"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/editHautObst1"
+            android:layout_width="79dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="number"
+            android:textColor="@color/txt"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/tvHautObst1"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoObs11"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/editLargObst1"
+            android:layout_width="79dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="number"
+            android:textColor="@color/txt"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@+id/tvLargObst1"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoObs13"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clObst2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clObst1">
+
+        <TextView
+            android:id="@+id/tvObst2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="@string/libObst2"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbDispoObs21"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hd"
+            android:checked="true"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libObs1"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/tvObst2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbDispoObs22"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libObs2"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/rbDispoObs21"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbDispoObs23"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libObs3"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toRightOf="@+id/rbDispoObs22"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TvHautObstt2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:text="@string/libHObs"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvObst2" />
+
+        <TextView
+            android:id="@+id/tvLargObst2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:gravity="left"
+            android:text="@string/libLObs"
+            android:textColor="@color/hd"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@+id/editHautObst2"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoObs22"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/editHautObst2"
+            android:layout_width="79dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="number"
+            android:textColor="@color/txt"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/TvHautObstt2"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoObs22"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/editLargObst2"
+            android:layout_width="79dp"
+            android:layout_height="22dp"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="number"
+            android:textColor="@color/txt"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@+id/tvLargObst2"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoObs23"
+            tools:ignore="LabelFor,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvEntree"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/libEntree"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="@+id/rbDispoObs21"
+            app:layout_constraintTop_toBottomOf="@+id/tvLargObst2" />
+
+        <RadioButton
+            android:id="@+id/rbDispoET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="false"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libTrot"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="@+id/rbDispoObs22"
+            app:layout_constraintTop_toBottomOf="@+id/tvLargObst2" />
+
+        <RadioButton
+            android:id="@+id/rbDispoEG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/hd"
+            android:checked="true"
+            android:onClick="onRBTabProfilClicked"
+            android:text="@string/libGalop"
+            android:textColor="@color/hd"
+            app:layout_constraintLeft_toLeftOf="@+id/rbDispoObs23"
+            app:layout_constraintTop_toBottomOf="@+id/tvLargObst2" />
+
+        <CheckBox
+            android:id="@+id/cbDispoBR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="8dp"
+            android:button="@null"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/libReglage"
+            android:textColor="@color/hd"
+            app:buttonTint="@color/hd"
+            app:layout_constraintLeft_toLeftOf="@+id/tvObst2"
+            app:layout_constraintTop_toBottomOf="@+id/tvEntree" />
+
+        <Button
+            android:id="@+id/btnCalc"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button"
+            android:shadowColor="@color/txt"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="@string/btnCalc"
+            android:textColor="@color/bg"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@+id/cbDispoBR"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbDispoEG" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/libResultat"
+        android:textColor="@color/txt"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clObst2"
+        tools:ignore="RtlHardcoded" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clResultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TextView
+            android:id="@+id/tvSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/libSP"
+            android:textColor="@color/txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv1F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/lib1F"
+            android:textColor="@color/txt"
+            app:layout_constraintLeft_toRightOf="@+id/tvSP"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/lib2F"
+            android:textColor="@color/txt"
+            app:layout_constraintLeft_toRightOf="@+id/tv1F"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv3F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/lib3F"
+            android:textColor="@color/txt"
+            app:layout_constraintLeft_toRightOf="@id/tv2F"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv4F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/lib4F"
+            android:textColor="@color/txt"
+            app:layout_constraintLeft_toRightOf="@id/tv3F"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSPRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tvSP"
+            app:layout_constraintRight_toRightOf="@+id/tvSP"
+            app:layout_constraintTop_toBottomOf="@+id/tvSP" />
+
+        <TextView
+            android:id="@+id/tv1FRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv1F"
+            app:layout_constraintRight_toRightOf="@+id/tv1F"
+            app:layout_constraintTop_toBottomOf="@+id/tv1F" />
+
+        <TextView
+            android:id="@+id/tv2FRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv2F"
+            app:layout_constraintRight_toRightOf="@+id/tv2F"
+            app:layout_constraintTop_toBottomOf="@+id/tv2F" />
+
+        <TextView
+            android:id="@+id/tv3FRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv3F"
+            app:layout_constraintRight_toRightOf="@+id/tv3F"
+            app:layout_constraintTop_toBottomOf="@+id/tv3F" />
+
+        <TextView
+            android:id="@+id/tv4FRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_edittext"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv4F"
+            app:layout_constraintRight_toRightOf="@+id/tv4F"
+            app:layout_constraintTop_toBottomOf="@+id/tv4F" />
+
+        <TextView
+            android:id="@+id/tvBR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/libCourtRegl"
+            android:textColor="@color/txt"
+            app:layout_constraintLeft_toLeftOf="@+id/tvSP"
+            app:layout_constraintTop_toBottomOf="@+id/tvSPRes" />
+
+        <TextView
+            android:id="@+id/tvBRRes"
+            android:layout_width="56dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tvBR"
+            app:layout_constraintTop_toBottomOf="@+id/tvSPRes" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
