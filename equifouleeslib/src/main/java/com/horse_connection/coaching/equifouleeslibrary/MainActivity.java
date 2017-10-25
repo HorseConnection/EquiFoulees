@@ -1,4 +1,4 @@
-package com.horse_connection.coaching.equifoulees;
+package com.horse_connection.coaching.equifouleeslibrary;
 
 import android.app.Dialog;
 import android.content.Context;

@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">EquiFoulées</string>
+    <string name="C">Cheval</string>
+    <string name="PA">Poney A</string>
+    <string name="PB">Poney B</string>
+    <string name="PC">Poney C</string>
+    <string name="PD">Poney D</string>
+    <string name="libFoulees">Taille des foulées(cm)</string>
+    <string name="libProfil">Profil du dispositif</string>
+    <string name="libObst1">Obstacle 1</string>
+    <string name="libObst2">Obstacle 2</string>
+    <string name="libObs1">Vertical</string>
+    <string name="libObs2">O.Carré</string>
+    <string name="libObs3">O.Mont</string>
+    <string name="libHObs">Haut.(cm)</string>
+    <string name="libLObs">Larg.(cm)</string>
+    <string name="libEntree">Entrée au</string>
+    <string name="libTrot">Trot</string>
+    <string name="libGalop">Galop</string>
+    <string name="libReglage">Avec barre de réglage ?</string>
+    <string name="libCourtRegl">B.Réglage</string>
+    <string name="lib1F">1 foulée</string>
+    <string name="lib2F">2 foulées</string>
+    <string name="lib3F">3 foulées</string>
+    <string name="lib4F">4 foulées</string>
+    <string name="libSP">S. Puce</string>
+    <string name="libTiret" tools:ignore="UnusedResources">-</string>
+    <string name="libHMin" tools:ignore="UnusedResources">hMin</string>
+    <string name="libHMax" tools:ignore="UnusedResources">hMax</string>
+    <string name="btnCalc">Calculer</string>
+    <string name="nbFoul" tools:ignore="UnusedResources">Nombre de foulées</string>
+    <string name="defHaut" tools:ignore="UnusedResources">100</string>
+    <string name="defLarg" tools:ignore="UnusedResources">80</string>
+    <string name="libResultat">Résultat</string>
+    <string name="libOui">OUI</string>
+    <string name="libNon">NON</string>
+    <string name="libConfirm">Rénitialiser les hauteurs/largeurs par défaut ?</string>
+    <string name="libCbAlertDialog">Ne pas me redemander plus tard</string>
+
+
+</resources>

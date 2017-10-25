@@ -1,6 +1,7 @@
 # Built application files
 *.apk
 *.ap_
+*.aar
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -54,3 +55,10 @@ freeline/
 freeline_project_description.json
 /app/src/androidTest/java/
 /app/src/test/java/
+libs/
+src/androidTest/
+src/main/java/
+src/main/res/drawable/
+src/test/
+/equifouleeslib/src/androidTest/java/com/horse_connection/coaching/equifouleslibrary/
+/equifouleeslib/src/test/java/com/horse_connection/coaching/equifouleslibrary/
